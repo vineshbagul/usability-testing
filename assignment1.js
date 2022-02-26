@@ -1,35 +1,31 @@
 class Stack
 {
-    top;
+    head;
     array;
     capacity;
 
     constructor(capacity)
     {
         this.array=[];
-        this.top = -1;
+        this.head = -1;
         this.capacity=capacity;
     }
 
 /***********************************
 ******pushing into stack **********
 ***********************************/
-
-
-
-
     push(value)
     {
-        if(this.top==this.capacity-1)
+        if(this.head==this.capacity-1)
         {
             console.log("Overflow");
         }
         else
         {
-            this.top +=1;
-            this.array[this.top]=value;
-            console.log(`${this.array[this.top]} is inserted`);
-            return this.top;
+            this.head +=1;
+            this.array[this.head]=value;
+            console.log(`${this.array[this.head]} is inserted`);
+            return this.head;
         }
 
     }
@@ -38,15 +34,15 @@ class Stack
 ***********************************/
     pop()
     {
-        if(this.top==-1)
+        if(this.head==-1)
         {
             console.log("underflow");
         }
         else
         {
-            this.top -=1;
+            this.head -=1;
             console.log("element is popped");
-            return this.top;
+            return this.head;
         }
     }
 
@@ -55,13 +51,13 @@ class Stack
 ***********************************/
     peek()
     {   
-        if(this.top==-1)
+        if(this.head==-1)
         {
             console.log("stack is empty");
         }
         else
         {
-        console.log(`${this.array[this.top]} is top element`);
+        console.log(`${this.array[this.head]} is top element`);
         }
     }
 
