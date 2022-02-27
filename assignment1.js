@@ -30,5 +30,22 @@ push(value)
 
 }
 
+/***********************************
+******popping into stack **********
+***********************************/
+pop()
+{
+    if(this.head==-1)
+    {
+        console.log("underflow");
+    }
+    else
+    {
+        this.head -=1;
+        console.log("element is popped");
+        return this.head;
+    }
+}
+
 
 }
