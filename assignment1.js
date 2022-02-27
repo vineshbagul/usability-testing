@@ -47,5 +47,28 @@ pop()
     }
 }
 
+/***********************************
+******peek element in stack ********
+***********************************/
+peek()
+{   
+    if(this.head==-1)
+    {
+        console.log("stack is empty");
+    }
+    else
+    {
+    console.log(`${this.array[this.head]} is top element`);
+    }
+}
+
 
 }
+
+let s = new Stack(1);
+s.push(2);
+s.peek();
+s.pop();
+
+
+
